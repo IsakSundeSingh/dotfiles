@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+transfer() {
+    if [ $# -eq 0 ]; then
+        echo -e "No arguments specified. Usage:\\necho transfer /tmp/test.md\\ncat /tmp/test.md | transfer test.md";
+        return 1;
+    fi
+
+    tmpfile=$( mktemp -t transferXXX );
+    if tty -s; then
+        basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g');
+        curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> "$tmpfile";
+    else
+        curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> "$tmpfile";
+    fi;
+    if [[ ! $(which clip) =~ 'not found' ]]; then
+      tee >(cat) < "$tmpfile" | clip
+    else
+      cat "$tmpfile"
+    fi
+
+    rm -f "$tmpfile";
+}
+
+c() {
+    if [ $# -eq 0 ]; then
+        echo -e "No arguments specified. Usage:\\n c <text file>";
+        return 1;
+    fi
+
+    if [[ -x $(which pygmentize) ]]; then
+        pygmentize -O style=monokai -f console256 -g "$*" | less -FXR
+    else
+        $PAGER "$*"
+    fi
+}

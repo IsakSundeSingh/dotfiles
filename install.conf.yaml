@@ -1,11 +1,21 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+
 - clean: ['~']
 
 - link:
-    ~/.profile: profile
-    ~/.bash_profile: bash_profile
-    ~/.bashrc: bashrc
-    ~/.bash_logout: bash_logout
-    ~/.gitconfig: gitconfig
-    ~/.xinitrc: xinitrc
+    ~/.bash_profile: config/bash_profile
+    ~/.bashrc: config/bashrc
+    ~/.editorconfig: config/editorconfig
+    ~/.gitconfig: config/gitconfig
+    ~/.gitignore: config/gitignore
+    ~/.oh-my-zsh: oh-my-zsh
+    ~/.shell: shell
+    ~/.xinitrc: config/xinitrc
+    ~/.zshrc: config/zshrc
 
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
 
