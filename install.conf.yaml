@@ -14,6 +14,7 @@
     ~/.hyper.js: config/hyper.js
     ~/.oh-my-zsh: oh-my-zsh
     ~/.shell: shell
+    ~/.shell_env: config/shell_env
     ~/.xinitrc: config/xinitrc
     ~/.zshrc: config/zshrc
 
