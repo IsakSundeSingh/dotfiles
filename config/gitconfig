@@ -1,7 +1,7 @@
 [user]
 	name = Isak Sunde Singh
 	email = isak.sunde.singh@gmail.com
-	signingkey = 5ADDB4658223C31C
+	signingkey = DC95015ED0274DF0
 
 [core]
 	editor = nano
@@ -23,4 +23,4 @@
 	fixup = !sh -c 'REV=$(git rev-parse $1) && git commit -n --fixup $@ && git rebase -i --autosquash $REV^' -
 	squash = !sh -c 'REV=$(git rev-parse $1) && git commit -n --squash $@ && git rebase -i --autosquash $REV^' -
 [commit]
-	gpgSign = true
+	gpgsign = true

@@ -11,7 +11,6 @@
     ~/.editorconfig: config/editorconfig
     ~/.gitconfig: config/gitconfig
     ~/.gitignore: config/gitignore
-    ~/.hyper.js: config/hyper.js
     ~/.oh-my-zsh: oh-my-zsh
     ~/.shell: shell
     ~/.shell_env: config/shell_env
