@@ -6,7 +6,7 @@
 [core]
 	editor = nano
 	excludesfile = ~/.gitignore
-	pager = less
+	pager = "diff-so-fancy | less"
 
 [include]
 	path = ~/.gitconfig_local
