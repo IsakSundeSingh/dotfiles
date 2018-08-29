@@ -5,3 +5,4 @@ export VISUAL="code"
 export EDITOR=$VISUAL
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 export PATH=$HOME/.local/bin:$HOME/flutter/bin:$PATH
+export BAT_THEME="TwoDark"
