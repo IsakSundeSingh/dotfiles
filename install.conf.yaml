@@ -13,6 +13,7 @@
     ~/.gitignore: config/gitignore
     ~/.local/share/fonts/DejaVuSansMono: fonts/DejaVuSansMono
     ~/.oh-my-zsh: oh-my-zsh
+    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: spaceship-prompt/spaceship.zsh-theme
     ~/.shell: shell
     ~/.shell_env: config/shell_env
     ~/.xinitrc: config/xinitrc
