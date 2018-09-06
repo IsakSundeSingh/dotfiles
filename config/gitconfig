@@ -1,9 +1,10 @@
 [user]
 	name = Isak Sunde Singh
 	email = isak.sunde.singh@gmail.com
-	signingkey = DC95015ED0274DF0
+	signingkey = 82BBCC5F72B5A9C6
 
 [core]
+	autocrlf = input
 	editor = nano
 	excludesfile = ~/.gitignore
 	pager = "diff-so-fancy | $PAGER"
