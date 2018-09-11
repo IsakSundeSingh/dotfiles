@@ -6,3 +6,4 @@ alias path='echo $PATH | tr -s ":" "\n"'
 alias clip="xclip -selection clipboard"
 alias unclip="xclip -selection clipboard -o"
 alias c="bat"
+alias open="xdg-open"
