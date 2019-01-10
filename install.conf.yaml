@@ -12,6 +12,10 @@
     ~/.gitconfig: config/gitconfig
     ~/.gitignore: config/gitignore
     ~/.local/share/fonts/DejaVuSansMono: fonts/DejaVuSansMono
+    ~/.local/bin/:
+      create: true
+      glob: true
+      path: bin/*
     ~/.oh-my-zsh: oh-my-zsh
     ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: spaceship-prompt/spaceship.zsh-theme
     ~/.shell: shell
