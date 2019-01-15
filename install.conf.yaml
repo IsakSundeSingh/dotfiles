@@ -12,6 +12,7 @@
     ~/.gitconfig: config/gitconfig
     ~/.gitignore: config/gitignore
     ~/.local/bin/diff-so-fancy: bin/diff-so-fancy
+    ~/.local/bin/exercism: bin/exercism
     ~/.local/share/fonts/DejaVuSansMono: fonts/DejaVuSansMono
     ~/.oh-my-zsh: oh-my-zsh
     ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: spaceship-prompt/spaceship.zsh-theme
