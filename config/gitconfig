@@ -17,6 +17,12 @@
 [push]
 	default = simple
 
+[pull]
+	rebase = true
+
+[rebase]
+	autostash = true
+
 [alias]
 	lg = "!git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %Cgreen{%G?}%Creset' --abbrev-commit  | sed s/{[BEN]}// | sed s/{[[:alpha:]]}/✓/ | $PAGER"
 	ignore = !git status -s | grep -e ^?? | cut -c 4- >> .gitignore
