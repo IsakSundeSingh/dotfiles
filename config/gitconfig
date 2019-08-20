@@ -1,7 +1,6 @@
 [user]
 	name = Isak Sunde Singh
 	email = isak.sunde.singh@gmail.com
-	signingkey = DC95015ED0274DF0
 
 [core]
 	editor = nano
