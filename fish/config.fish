@@ -45,3 +45,6 @@ set -a PATH $GOPATH/bin
 
 # dotnet root required for some dotnet tools
 set -gx DOTNET_ROOT /opt/dotnet/
+
+# init starship prompt
+source ("/home/isak/.cargo/bin/starship" init fish --print-full-init | psub)
