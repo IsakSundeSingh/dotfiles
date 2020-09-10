@@ -1,3 +1,3 @@
 function clip -d "Copy from stdin to clipboard"
-  xclip -r -selection clipboard
+  copyq insert 0 -
 end
