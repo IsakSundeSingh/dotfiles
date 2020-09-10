@@ -1,30 +1,40 @@
 [user]
-	name = Isak Sunde Singh
-	email = isak.sunde.singh@gmail.com
+  name = Isak Sunde Singh
+  email = isak.sunde.singh@gmail.com
+  signingkey = 04E2BEC1979D79E2
 
 [core]
-	editor = nano
-	excludesfile = ~/.gitignore
-	pager = "diff-so-fancy | $PAGER"
+  editor = nano
+  excludesfile = ~/.gitignore
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
 
 [include]
-	path = ~/.gitconfig_local
+  path = ~/.gitconfig_local
 
 [gc]
-	autoDetach = false
+  autoDetach = false
 
 [push]
-	default = simple
+  default = simple
 
 [pull]
-	rebase = true
+  rebase = true
 
 [rebase]
-	autostash = true
+  autostash = true
 
 [alias]
-	lg = "!git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %Cgreen{%G?}%Creset' --abbrev-commit  | sed s/{[BEN]}// | sed s/{[[:alpha:]]}/✓/ | $PAGER"
-	ignore = !git status -s | grep -e ^?? | cut -c 4- >> .gitignore
-	fixup = !sh -c 'REV=$(git rev-parse $1) && git commit -n --fixup $@ && git rebase -i --autosquash $REV^' -
-	squash = !sh -c 'REV=$(git rev-parse $1) && git commit -n --squash $@ && git rebase -i --autosquash $REV^' -
+  lg = "!git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset %Cgreen{%G?}%Creset' --abbrev-commit  | sed s/{[BEN]}// | sed s/{[[:alpha:]]}/✓/ | $PAGER"
+  ignore = !git status -s | grep -e ^?? | cut -c 4- >> .gitignore
+  fixup = !sh -c 'REV=$(git rev-parse $1) && git commit -n --fixup $@ && git rebase -i --autosquash $REV^' -
+  squash = !sh -c 'REV=$(git rev-parse $1) && git commit -n --squash $@ && git rebase -i --autosquash $REV^' -
 
+[commit]
+  gpgsign = true
+
+[delta]
+  side-by-side = true
+  line-numbers = true
