@@ -25,7 +25,7 @@ set -gx GOPATH $HOME/.go
 set -gx MAKEFLAGS -j(nproc)
 
 # Don't feel like I need those bytecode files
-set -gx PYTHONDONTWRITEBYTECODE please
+set -gx PYTHONDONTWRITEBYTECODE pythonplz
 
 # Less flags:
 #  F - Quit if one screen
@@ -36,11 +36,10 @@ set -gx PYTHONDONTWRITEBYTECODE please
 set -gx LESS FRESX
 
 # path
-set -gx PATH /usr/local/bin /usr/bin /usr/sbin /bin /sbin
+set -gx PATH $N_PREFIX/bin /usr/local/bin /usr/bin /usr/sbin /bin /sbin
 set -a PATH $HOME/.local/bin
 set -a PATH $HOME/.cargo/bin
 set -a PATH $HOME/.dotnet/tools
-set -a PATH $N_PREFIX/bin
 set -a PATH $GOPATH/bin
 
 # dotnet root required for some dotnet tools
