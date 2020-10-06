@@ -11,6 +11,9 @@
 [interactive]
   diffFilter = delta --color-only
 
+[diff]
+    colorMoved = default
+
 [include]
   path = ~/.gitconfig_local
 
