@@ -46,4 +46,4 @@ set -a PATH $GOPATH/bin
 set -gx DOTNET_ROOT /opt/dotnet/
 
 # init starship prompt
-source ("/home/isak/.cargo/bin/starship" init fish --print-full-init | psub)
+starship init fish | source
