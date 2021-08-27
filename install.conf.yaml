@@ -10,20 +10,21 @@
     ~/.bashrc: config/bashrc
     ~/.editorconfig: config/editorconfig
     ~/.config/fish:
-        create: true
-        glob: true
-        path: fish/*
+      create: true
+      glob: true
+      path: fish/*
     ~/.gitconfig: config/gitconfig
     ~/.gitignore: config/gitignore
     ~/.local/bin/diff-so-fancy: bin/diff-so-fancy
     ~/.local/bin/exercism: bin/exercism
     ~/.local/share/fonts:
-        create: true
-        glob: true
-        path: fonts/*
+      create: true
+      glob: true
+      path: fonts/*
     ~/.shell: shell
     ~/.shell_env: config/shell_env
     ~/.xinitrc: config/xinitrc
+    ~/.config/starship.toml: config/starship.toml
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
