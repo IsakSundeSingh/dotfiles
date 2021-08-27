@@ -1,5 +1,6 @@
 # quick aliases
 alias gst "git status"
+alias python /usr/local/bin/python3 # Damn macOS
 alias .. "cd .."
 alias ... "cd ../.."
 alias .... "cd ../../.."
@@ -10,7 +11,6 @@ set -gx LC_ALL en_US.UTF-8
 set -gx LANG en_US.UTF-8
 set -gx LANGUAGE en_US.UTF-8
 
-set -gx BROWSER google-chrome-stable
 
 # editors and pager options
 set -gx VISUAL code
@@ -22,7 +22,7 @@ set -gx N_PREFIX $HOME/.n
 set -gx GOPATH $HOME/.go
 
 # Parallel make, use all available cores
-set -gx MAKEFLAGS -j(nproc)
+set -gx MAKEFLAGS -j(sysctl -n hw.ncpu)
 
 # Don't feel like I need those bytecode files
 set -gx PYTHONDONTWRITEBYTECODE pythonplz
