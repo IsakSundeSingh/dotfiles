@@ -48,7 +48,6 @@ set -gx DOTNET_ROOT /opt/dotnet/
 # init starship prompt
 starship init fish | source
 
-
 # Use exa when typing ls if it is installed
 if [ -e ~/.cargo/bin/exa ]
     abbr -a -g l exa
@@ -56,3 +55,6 @@ if [ -e ~/.cargo/bin/exa ]
     abbr -a -g ll "exa -l"
     abbr -a -g lll "exa -la"
 end
+
+# Search git diffs for the following phrase and print the author, date and hash of the commits containing it (with colors)
+abbr -a -g gits 'git log --format="%C(cyan)%an - %Creset%as (%C(yellow)%h%Creset)" -i -S'
