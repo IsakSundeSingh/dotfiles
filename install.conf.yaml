@@ -15,8 +15,6 @@
       path: fish/*
     ~/.gitconfig: config/gitconfig
     ~/.gitignore: config/gitignore
-    ~/.local/bin/diff-so-fancy: bin/diff-so-fancy
-    ~/.local/bin/exercism: bin/exercism
     ~/.local/share/fonts:
       create: true
       glob: true
