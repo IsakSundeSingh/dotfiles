@@ -54,6 +54,7 @@ if test -e ~/.cargo/bin/exa; or test -e /usr/bin/exa
     abbr -a -g ls exa
     abbr -a -g ll "exa -l"
     abbr -a -g lll "exa -la"
+    abbr -a -g tree "exa --tree --sort=size --long --color-scale --no-permissions --no-user --no-time --level=3"
 end
 
 # Search git diffs for the following phrase and print the author, date and hash of the commits containing it (with colors)
