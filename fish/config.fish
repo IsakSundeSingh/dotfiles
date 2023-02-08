@@ -49,7 +49,7 @@ set -gx DOTNET_ROOT /opt/dotnet/
 starship init fish | source
 
 # Use exa when typing ls if it is installed
-if [ -e ~/.cargo/bin/exa ]
+if test -e ~/.cargo/bin/exa; or test -e /usr/bin/exa
     abbr -a -g l exa
     abbr -a -g ls exa
     abbr -a -g ll "exa -l"
